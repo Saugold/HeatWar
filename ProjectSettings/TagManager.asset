@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Damage
   - Shoot
+  - Charge
   layers:
   - Default
   - TransparentFX

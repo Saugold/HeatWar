@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Vector2 movimento;
     private Camera mainCamera;
     private PlayerInput playerInput;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private bool isShooting;
     private float laserChargeTime = 0.3f; // Tempo em segundos para carregar o laser
     private float currentChargeTime;
@@ -40,7 +40,12 @@ public class Player : MonoBehaviour
 
     public void SetMoviment(InputAction.CallbackContext value)
     {
-        movimento = value.ReadValue<Vector2>();
+        if (!Special._special.isCharging)
+        {
+            movimento = value.ReadValue<Vector2>();
+        }
+        else
+            movimento = Vector2.zero;
     }
    
     public void SetShoot(InputAction.CallbackContext value)
