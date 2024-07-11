@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    private float moveSpeed = 5f;
+    [SerializeField]private float moveSpeed = 5f;
     private Vector2 movimento;
     private Camera mainCamera;
     private PlayerInput playerInput;

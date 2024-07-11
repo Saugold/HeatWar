@@ -7,14 +7,16 @@ TagManager:
   - Damage
   - Shoot
   - Charge
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Damage
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -43,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Damage
+    uniqueID: 3897135387
+    locked: 0
+  - name: Enemy
+    uniqueID: 3293187061
     locked: 0
