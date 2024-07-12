@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         moveDirection = movimento.normalized;
         // Calcula o vetor de movimento
