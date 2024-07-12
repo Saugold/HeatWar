@@ -14,13 +14,13 @@ public class Player : MonoBehaviour
     private PlayerInput playerInput;
     public Rigidbody2D rb;
     private bool isShooting;
-    private float laserChargeTime = 0.3f; // Tempo em segundos para carregar o laser
-    private float currentChargeTime;
+    [SerializeField]private float laserChargeTime = 0.3f; // Tempo em segundos para carregar o laser
+    [SerializeField] private float currentChargeTime;
 
     [SerializeField] private GameObject laser;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Slider laserChargeSlider; // Referência para a barra de progresso
-
+    
     public float rotationSpeed = 15f;
     public static Player _player;
     public Vector2 moveDirection;
@@ -52,11 +52,14 @@ public class Player : MonoBehaviour
     {
         if (value.started && !isShooting)
         {
+            AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxTiro, this.transform.position);
             isShooting = true;
             StartCoroutine(Laser());
         }
 
     }
+
+   
 
 
 

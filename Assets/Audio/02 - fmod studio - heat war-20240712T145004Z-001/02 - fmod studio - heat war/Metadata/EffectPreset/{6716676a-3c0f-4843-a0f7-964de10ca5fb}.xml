@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EffectPreset" id="{6716676a-3c0f-4843-a0f7-964de10ca5fb}">
+		<property name="name">
+			<value>Effect Chain</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9db4ddda-9edb-4026-9f07-2ede82041109}</destination>
+		</relationship>
+		<relationship name="effect">
+			<destination>{53f3941a-e36c-4380-892e-56cfedad6391}</destination>
+		</relationship>
+	</object>
+	<object class="EffectChain" id="{53f3941a-e36c-4380-892e-56cfedad6391}" />
+</objects>

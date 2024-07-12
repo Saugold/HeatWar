@@ -15,8 +15,11 @@ public class LargeEnemy : MonoBehaviour, IEnemy
     [field: Header("TiroConfig")]
     [SerializeField] private GameObject projectilePrefab; // Prefab do projetil
     [SerializeField] private Transform firePoint; // Ponto de origem do disparo
-    [SerializeField] private float fireRate = 2f; // Taxa de disparo em segundos
+    [SerializeField] private float intervaloRajada = 1f; // Intervalo entre as rajadas em segundos
     [SerializeField] private float projectileSpeed = 10f; // Velocidade do projetil
+
+    [SerializeField] private int tirosPorRajada = 3; // Número de tiros por rajada
+    [SerializeField] private float intervaloCadaTiro = 0.1f; // Intervalo entre cada tiro dentro da rajada
 
     private bool canShoot = true;
     private float timeSincePlayerInSight = 0f;
@@ -108,6 +111,7 @@ public class LargeEnemy : MonoBehaviour, IEnemy
 
     public void Morrer()
     {
+        AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxDeadLarge, this.transform.position);
         Debug.Log("Morreu");
         Destroy(this.gameObject);
     }
@@ -118,12 +122,17 @@ public class LargeEnemy : MonoBehaviour, IEnemy
         {
             if (canShoot)
             {
-                Atirar(); // Dispara o projetil
-                canShoot = false; // Impede novos disparos até o próximo intervalo
-                yield return new WaitForSeconds(1f / fireRate); // Espera o intervalo de disparo
-                canShoot = true; // Permite novos disparos após o intervalo
+                canShoot = false; // Impede novas chamadas enquanto a corrotina está em execução
+                AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxTiroLarge, this.transform.position);
+                for (int i = 0; i < tirosPorRajada; i++)
+                {
+                    Atirar(); // Dispara o projetil
+                    yield return new WaitForSeconds(intervaloCadaTiro); // Espera o intervalo entre tiros dentro da rajada
+                }
+
+                yield return new WaitForSeconds(intervaloRajada); // Espera o intervalo de rajada
+                canShoot = true; // Permite novos disparos após o intervalo de rajada
             }
-            yield return null;
         }
     }
 

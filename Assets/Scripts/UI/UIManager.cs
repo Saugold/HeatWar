@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,9 +14,15 @@ public class UIManager : MonoBehaviour
     public static event LifeUpdate OnLifeUpdated;
     [SerializeField] private TextMeshProUGUI vida;
     [SerializeField] private GameObject reiniciar;
-
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject credits;
+    [SerializeField] private GameObject pause;
+    private bool isPaused;
+    [SerializeField] private Button pauseButton;
+    [SerializeField] private Button reiniciarButton;
     void Start()
     {
+        isPaused = false;
         PlayerLife.OnPlayerDied += Reiniciar;
         PlayerLife.OnPlayerDamage += UpdateLife;
     }
@@ -26,6 +35,9 @@ public class UIManager : MonoBehaviour
 
     private void Reiniciar()
     {
+        AudioManager._audioManager.StopAllAudioEvents();
+        AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.gameOver, this.transform.position);
+        EventSystem.current.SetSelectedGameObject(reiniciarButton.gameObject);
         reiniciar.SetActive(true);
         Time.timeScale = 0; // Pausa o jogo
     }
@@ -40,4 +52,51 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1; // Reinicia o tempo do jogo
         SceneManager.LoadScene("Fase");
     }
+    public void VoltarMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void Creditos()
+    {
+        menu.SetActive(false);
+        credits.SetActive(true);
+    }
+
+    public void Voltar()
+    {
+        menu.SetActive(true);
+        credits.SetActive(false);
+    }
+
+    public void Sair()
+    {
+        
+        Application.Quit();
+    }
+
+    public void Pause()
+    {
+        if (isPaused)
+        {
+            isPaused = false;
+            pause.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            isPaused = true;
+            EventSystem.current.SetSelectedGameObject(pauseButton.gameObject);
+            pause.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+    public void SetMenu(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            Pause();
+        }
+    }
+
+    
 }

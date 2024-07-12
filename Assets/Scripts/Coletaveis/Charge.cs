@@ -16,6 +16,7 @@ public class Charge : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxCharge, this.transform.position);
             Special._special.Charge(valorCarga);
             Destroy(this.gameObject);
         }

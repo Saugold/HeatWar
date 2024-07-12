@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Workspace" id="{15bcd152-379f-4ac5-9da5-b6aa90fed935}">
+		<property name="builtBanksOutputDirectory">
+			<value>../build fmod - HEAT WAR</value>
+		</property>
+		<relationship name="masterEventFolder">
+			<destination>{b2d062ed-642d-4cc1-a3a6-a5eccf4b4c03}</destination>
+		</relationship>
+		<relationship name="masterTagFolder">
+			<destination>{56eaf0e6-35de-4489-8f56-cbe0c81bd509}</destination>
+		</relationship>
+		<relationship name="masterEffectPresetFolder">
+			<destination>{9db4ddda-9edb-4026-9f07-2ede82041109}</destination>
+		</relationship>
+		<relationship name="masterParameterPresetFolder">
+			<destination>{000c1c2a-c4e2-4861-9d9a-1730f9fb27f2}</destination>
+		</relationship>
+		<relationship name="masterBankFolder">
+			<destination>{4342e265-8928-4526-b705-73c63d6bc44b}</destination>
+		</relationship>
+		<relationship name="masterSandboxFolder">
+			<destination>{f64a1820-3259-4104-9be0-0f48a16ce9a4}</destination>
+		</relationship>
+		<relationship name="masterAssetFolder">
+			<destination>{2f82f29a-cc11-4c3b-a51a-2eddd596bad7}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{48a043d3-2f3e-433a-8205-fb9ad426c6e2}</destination>
+		</relationship>
+		<relationship name="profilerSessionFolder">
+			<destination>{c5ae2fcb-8384-486c-b724-6b8d2acdcb8f}</destination>
+		</relationship>
+		<relationship name="platforms">
+			<destination>{a5c0fc78-a599-4687-9327-2bd7423676c4}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MasterTagFolder" id="{56eaf0e6-35de-4489-8f56-cbe0c81bd509}">
+		<property name="name">
+			<value>Master</value>
+		</property>
+		<relationship name="items">
+			<destination>{452dc3d1-9cba-48d1-a637-ca9b80f9faed}</destination>
+			<destination>{a90b32e9-b678-4a55-9b20-ddb0d50a988a}</destination>
+		</relationship>
+	</object>
+	<object class="Tag" id="{452dc3d1-9cba-48d1-a637-ca9b80f9faed}">
+		<property name="name">
+			<value>Som do tiro básico</value>
+		</property>
+	</object>
+	<object class="Tag" id="{a90b32e9-b678-4a55-9b20-ddb0d50a988a}">
+		<property name="name">
+			<value>do</value>
+		</property>
+	</object>
+</objects>

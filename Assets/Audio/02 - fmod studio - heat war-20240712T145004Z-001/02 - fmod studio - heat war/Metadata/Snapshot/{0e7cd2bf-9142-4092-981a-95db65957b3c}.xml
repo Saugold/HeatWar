@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Snapshot" id="{0e7cd2bf-9142-4092-981a-95db65957b3c}">
+		<property name="name">
+			<value>gameplay</value>
+		</property>
+		<relationship name="mixer">
+			<destination>{48a043d3-2f3e-433a-8205-fb9ad426c6e2}</destination>
+		</relationship>
+		<relationship name="automatableProperties">
+			<destination>{e4fc5b64-fd8f-4c53-a44d-6756b54edf5a}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{d7a1eae8-ac2d-4f40-bcf3-9a8cb8edca0d}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{e297cf13-cad8-4406-a880-93d135ad9906}</destination>
+		</relationship>
+		<relationship name="snapshotMasterTrack">
+			<destination>{20b8b44b-3c27-4d8d-9cab-9d022b02b66a}</destination>
+		</relationship>
+		<relationship name="snapshotProperties">
+			<destination>{13354f19-9630-4ab0-8b71-9b096998cb96}</destination>
+		</relationship>
+		<relationship name="snapshotTracks">
+			<destination>{415aa5ae-5b55-49fa-ad68-ce606e4b90c2}</destination>
+		</relationship>
+	</object>
+	<object class="EventAutomatableProperties" id="{e4fc5b64-fd8f-4c53-a44d-6756b54edf5a}" />
+	<object class="MarkerTrack" id="{d7a1eae8-ac2d-4f40-bcf3-9a8cb8edca0d}" />
+	<object class="Timeline" id="{e297cf13-cad8-4406-a880-93d135ad9906}" />
+	<object class="SnapshotMasterTrack" id="{20b8b44b-3c27-4d8d-9cab-9d022b02b66a}" />
+	<object class="SnapshotProperty" id="{13354f19-9630-4ab0-8b71-9b096998cb96}">
+		<property name="propertyName">
+			<value>volume</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{01134f82-4cf9-4f60-8c24-16eafa14403c}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{415aa5ae-5b55-49fa-ad68-ce606e4b90c2}">
+		<relationship name="mixerStrip">
+			<destination>{01134f82-4cf9-4f60-8c24-16eafa14403c}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -19,6 +19,10 @@ public class SmallEnemy : MonoBehaviour, IEnemy
     [SerializeField] private float fireRate = 2f; // Taxa de disparo em segundos
     [SerializeField] private float projectileSpeed = 10f; // Velocidade do projetil
 
+    [SerializeField] private float intervaloRajada = 1f; // Intervalo entre as rajadas em segundos
+    [SerializeField] private int tirosPorRajada = 3; // Número de tiros por rajada
+    [SerializeField] private float intervaloCadaTiro = 0.1f; // Intervalo entre cada tiro dentro da rajada
+
     private bool canShoot = true;
     void Start()
     {
@@ -83,6 +87,7 @@ public class SmallEnemy : MonoBehaviour, IEnemy
     }
     public void Morrer()
     {
+        AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxDeadSmall, this.transform.position);
         Debug.Log("Morreu");
         Destroy(this.gameObject);
     }
@@ -93,14 +98,18 @@ public class SmallEnemy : MonoBehaviour, IEnemy
         {
             if (canShoot)
             {
-                Atirar(); // Dispara o projetil
-                canShoot = false; // Impede novos disparos até o próximo intervalo
-                yield return new WaitForSeconds(1f / fireRate); // Espera o intervalo de disparo
-                canShoot = true; // Permite novos disparos após o intervalo
+                canShoot = false; // Impede novas chamadas enquanto a corrotina está em execução
+                AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxTiroSmall, this.transform.position);
+                for (int i = 0; i < tirosPorRajada; i++)
+                {
+                    Atirar(); // Dispara o projetil
+                    yield return new WaitForSeconds(intervaloCadaTiro); // Espera o intervalo entre tiros dentro da rajada
+                }
+
+                yield return new WaitForSeconds(intervaloRajada); // Espera o intervalo de rajada
+                canShoot = true; // Permite novos disparos após o intervalo de rajada
             }
-            yield return null;
         }
-            
     }
     void Atirar()
     {
@@ -110,7 +119,10 @@ public class SmallEnemy : MonoBehaviour, IEnemy
         float angle = Mathf.Atan2(playerdirection.y, playerdirection.x) * Mathf.Rad2Deg;
 
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
+
+        
         GameObject projectile2 = Instantiate(projectilePrefab, firePoint2.position, Quaternion.Euler(0, 0, angle));
+
         Rigidbody2D rb1 = projectile.GetComponent<Rigidbody2D>();
         Rigidbody2D rb2 = projectile2.GetComponent<Rigidbody2D>();
         if (rb1 != null && rb2 != null)

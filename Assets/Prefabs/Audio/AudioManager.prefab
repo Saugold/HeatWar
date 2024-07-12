@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1491762306738598263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3053129124619058372}
+  - component: {fileID: 3785058307484403351}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3053129124619058372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491762306738598263}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5590212411235278644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3785058307484403351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491762306738598263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b057767a5e2897f41999f441413a3250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxTiro:
+    Guid:
+      Data1: -767682037
+      Data2: 1167511779
+      Data3: 420699792
+      Data4: -1735592588
+    Path: event:/sfx/gameplay/player/sfx_basic_shooting
+  sfxEspecial:
+    Guid:
+      Data1: -1652589432
+      Data2: 1151005448
+      Data3: -310707530
+      Data4: 2021351292
+    Path: event:/sfx/gameplay/player/sfx_special_shoot
+  sfxDamage:
+    Guid:
+      Data1: 944588762
+      Data2: 1088910808
+      Data3: 604066736
+      Data4: 765912546
+    Path: event:/sfx/gameplay/player/sfx_player_damage
+  sfxDie:
+    Guid:
+      Data1: -59941546
+      Data2: 1311079917
+      Data3: 702563720
+      Data4: 857974232
+    Path: event:/sfx/gameplay/player/sfx_player_explosion
+  sfxCharge:
+    Guid:
+      Data1: -1447740915
+      Data2: 1144189976
+      Data3: 742796964
+      Data4: 548586474
+    Path: event:/sfx/gameplay/player/sfx_collector
+  sfxTiroSmall:
+    Guid:
+      Data1: 1888430705
+      Data2: 1110656406
+      Data3: -2109984605
+      Data4: -1043075014
+    Path: event:/sfx/gameplay/sfx_small_enemy/sfx_small_enemy_shot
+  sfxDanoSmall:
+    Guid:
+      Data1: 608980175
+      Data2: 1306242511
+      Data3: -1472012666
+      Data4: -1809028489
+    Path: event:/sfx/gameplay/sfx_small_enemy/sfx_small_enemy_damage
+  sfxDeadSmall:
+    Guid:
+      Data1: -1838980709
+      Data2: 1270783447
+      Data3: 980259489
+      Data4: -259648508
+    Path: event:/sfx/gameplay/sfx_small_enemy/sfx_small_enemy_explosion
+  sfxTiroLarge:
+    Guid:
+      Data1: -80181220
+      Data2: 1260103313
+      Data3: -1082417003
+      Data4: 1024326278
+    Path: event:/sfx/gameplay/sfx_med_enemy/sfx_med_enemy_shot
+  sfxDanoLarge:
+    Guid:
+      Data1: 1101699670
+      Data2: 1140729319
+      Data3: -7249733
+      Data4: 314246337
+    Path: event:/sfx/gameplay/sfx_med_enemy/sfx_med_enemy_damage
+  sfxDeadLarge:
+    Guid:
+      Data1: 320484555
+      Data2: 1146527415
+      Data3: 1350785725
+      Data4: -761114328
+    Path: event:/sfx/gameplay/sfx_med_enemy/sfx_med_enemy_explosion
+  sfxTiroBig:
+    Guid:
+      Data1: -1059584324
+      Data2: 1116059482
+      Data3: -1533094505
+      Data4: -1150179726
+    Path: event:/sfx/gameplay/sfx_big_enemy/sfx_big_enemy_shoot
+  sfxDanoBig:
+    Guid:
+      Data1: 1168226587
+      Data2: 1110616596
+      Data3: -1483334780
+      Data4: 720797865
+    Path: event:/sfx/gameplay/sfx_big_enemy/sfx_big_enemy_damage
+  sfxDeadBig:
+    Guid:
+      Data1: 1656091760
+      Data2: 1269163752
+      Data3: 1268247943
+      Data4: -719101945
+    Path: event:/sfx/gameplay/sfx_big_enemy/sfx_big_enemy_explosion
+  musicGameplay:
+    Guid:
+      Data1: 318764160
+      Data2: 1119023935
+      Data3: -1465137021
+      Data4: -626659795
+    Path: event:/music/mus_gamplay
+  musicTema:
+    Guid:
+      Data1: -2081631729
+      Data2: 1094564755
+      Data3: -750744408
+      Data4: 1823251226
+    Path: event:/music/mus_theme
+  gameOver:
+    Guid:
+      Data1: 20532834
+      Data2: 1246924895
+      Data3: -541966197
+      Data4: -1354460504
+    Path: event:/sfx/gameplay/sfx_fanfare/sfx_fanfare _of_defeat
+  sfxSelector:
+    Guid:
+      Data1: 1706296761
+      Data2: 1101151077
+      Data3: 500468127
+      Data4: -1184814472
+    Path: event:/sfx/ui/sfx_selector
+  sfxConfirm:
+    Guid:
+      Data1: -1562647963
+      Data2: 1150409946
+      Data3: -1453725025
+      Data4: -527462609
+    Path: event:/sfx/ui/sfx_confirm
+  sfxBack:
+    Guid:
+      Data1: -2030835426
+      Data2: 1339698503
+      Data3: 1081423251
+      Data4: -9911206
+    Path: event:/sfx/ui/sfx_to_back
+  sfxStart:
+    Guid:
+      Data1: 807931881
+      Data2: 1122395804
+      Data3: 1729724325
+      Data4: 690440771
+    Path: event:/sfx/ui/sfx_start_game
+--- !u!1 &3795112055039106623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5590212411235278644}
+  - component: {fileID: 4463980020706957002}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5590212411235278644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3795112055039106623}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.828515, y: -1.3399152, z: 0.029098405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3053129124619058372}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4463980020706957002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3795112055039106623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3416fc35289267408917a3f7802f845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

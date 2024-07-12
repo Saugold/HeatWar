@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{15884623-bdef-4182-b907-b20f5e418ff3}">
+		<property name="name">
+			<value>parametro teste</value>
+		</property>
+		<relationship name="folder">
+			<destination>{000c1c2a-c4e2-4861-9d9a-1730f9fb27f2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0ceee732-767b-447c-8b07-bfe8e536fbfe}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0ceee732-767b-447c-8b07-bfe8e536fbfe}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="velocity">
+			<value>-4</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>25</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{802763b3-d482-451c-b169-2068a405b785}</destination>
+			<destination>{65d8abcc-9da0-4db1-955d-9fc1d1a17f38}</destination>
+		</relationship>
+	</object>
+	<object class="RandomizerModulator" id="{802763b3-d482-451c-b169-2068a405b785}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="amount">
+			<value>18</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{65d8abcc-9da0-4db1-955d-9fc1d1a17f38}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="decayTime">
+			<value>8269.22949</value>
+		</property>
+		<property name="sustainValue">
+			<value>15.5555573</value>
+		</property>
+		<property name="releaseTime">
+			<value>775.641113</value>
+		</property>
+		<property name="releaseShape">
+			<value>0.136297703</value>
+		</property>
+		<property name="finalValue">
+			<value>-64</value>
+		</property>
+	</object>
+</objects>

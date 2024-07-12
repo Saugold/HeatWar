@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ae9c55be-07a8-4cdc-835d-af074c9bacf4}">
+		<property name="assetPath">
+			<value>sfx_small_enemy_damage4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f82f29a-cc11-4c3b-a51a-2eddd596bad7}</destination>
+		</relationship>
+	</object>
+</objects>
