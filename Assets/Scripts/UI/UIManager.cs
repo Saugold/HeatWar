@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     private void Reiniciar()
     {
         GameController._gameController.deads = 0;
-        AudioManager._audioManager.StopAllAudioEvents();
+        AudioManager._audioManager.StopCurrentMusic();
         AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.gameOver, this.transform.position);
         EventSystem.current.SetSelectedGameObject(reiniciarButton.gameObject);
         reiniciar.SetActive(true);

@@ -536,10 +536,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Audio/02 - fmod studio - heat war-20240712T145004Z-001/02
-    - fmod studio - heat war/heat_war_fmod.fspro
-  sourceBankPath: Assets/Audio/02 - fmod studio - heat war-20240712T145004Z-001/02
-    - fmod studio - heat war/Build
+  sourceProjectPath: Assets/Audio/heat_war_fmod-20240714T030113Z-001/heat_war_fmod/heat_war_fmod.fspro
+  sourceBankPath: Assets/Audio/heat_war_fmod-20240714T030113Z-001/heat_war_fmod/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
