@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d302fc9a-31ce-46ab-817e-8cb88c7070a8}">
+		<property name="name">
+			<value>tiro carregado</value>
+		</property>
+		<relationship name="folder">
+			<destination>{000c1c2a-c4e2-4861-9d9a-1730f9fb27f2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{294aa3e7-6e51-413f-a07c-3eb14d143939}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{294aa3e7-6e51-413f-a07c-3eb14d143939}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

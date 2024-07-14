@@ -6,5 +6,4 @@ public interface IEnemy
 {
     void Comportamento();
     void Atacar();
-    void Morrer();
 }

@@ -78,19 +78,7 @@ public class SmallEnemy : MonoBehaviour, IEnemy
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Shoot"))
-        {
-            Morrer();
-        }
-    }
-    public void Morrer()
-    {
-        AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxDeadSmall, this.transform.position);
-        Debug.Log("Morreu");
-        Destroy(this.gameObject);
-    }
+    
 
     IEnumerator ShootRoutine()
     {

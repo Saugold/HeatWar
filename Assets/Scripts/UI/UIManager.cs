@@ -20,6 +20,9 @@ public class UIManager : MonoBehaviour
     private bool isPaused;
     [SerializeField] private Button pauseButton;
     [SerializeField] private Button reiniciarButton;
+    [SerializeField] private LevelLoader levelLoader;
+    [SerializeField] private GameObject levelLoaderObject;
+    //[SerializeField] private game
     void Start()
     {
         isPaused = false;
@@ -35,6 +38,7 @@ public class UIManager : MonoBehaviour
 
     private void Reiniciar()
     {
+        GameController._gameController.deads = 0;
         AudioManager._audioManager.StopAllAudioEvents();
         AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.gameOver, this.transform.position);
         EventSystem.current.SetSelectedGameObject(reiniciarButton.gameObject);
@@ -47,8 +51,19 @@ public class UIManager : MonoBehaviour
         vida.text = life.ToString();
     }
 
-    public void Começar()
+    public void Comecar()
     {
+        Time.timeScale = 1; // Reinicia o tempo do jogo
+        SceneManager.LoadScene("Fase");
+    }
+    public void ComecarDoMenu()
+    {
+        StartCoroutine(RotinaComecarDoMenu());
+    }
+    public IEnumerator RotinaComecarDoMenu()
+    {
+        levelLoaderObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1; // Reinicia o tempo do jogo
         SceneManager.LoadScene("Fase");
     }
@@ -73,6 +88,7 @@ public class UIManager : MonoBehaviour
         
         Application.Quit();
     }
+
 
     public void Pause()
     {

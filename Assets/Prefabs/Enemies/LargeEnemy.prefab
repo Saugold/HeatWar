@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5555962941258478424}
   - component: {fileID: 6642401449672306827}
   - component: {fileID: 8625914868185621123}
+  - component: {fileID: 549936383919767951}
   m_Layer: 6
   m_Name: LargeEnemy
   m_TagString: Enemy
@@ -108,7 +109,7 @@ MonoBehaviour:
   intervaloRajada: 1
   projectileSpeed: 10
   tirosPorRajada: 3
-  intervaloCadaTiro: 0.2
+  intervaloCadaTiro: 0.3
 --- !u!50 &6642401449672306827
 Rigidbody2D:
   serializedVersion: 4
@@ -181,6 +182,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2531059, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &549936383919767951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550020809147275816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e8eb3b8a45daa4d8025ca0a177306f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 3
+  sfxDanoEnemy:
+    Guid:
+      Data1: 1101699670
+      Data2: 1140729319
+      Data3: -7249733
+      Data4: 314246337
+    Path: event:/sfx/gameplay/sfx_med_enemy/sfx_med_enemy_damage
+  sfxMorrerEnemy:
+    Guid:
+      Data1: 320484555
+      Data2: 1146527415
+      Data3: 1350785725
+      Data4: -761114328
+    Path: event:/sfx/gameplay/sfx_med_enemy/sfx_med_enemy_explosion
 --- !u!1 &2038944337778147971
 GameObject:
   m_ObjectHideFlags: 0

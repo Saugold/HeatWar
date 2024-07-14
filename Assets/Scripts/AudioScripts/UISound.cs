@@ -34,6 +34,7 @@ public class UISound : MonoBehaviour
 
     public void Começar()
     {
+        AudioManager._audioManager.StopAllAudioEvents();
         AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxStart, this.transform.position);
     }
     public void VoltarMenu()

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LargeEnemy : MonoBehaviour, IEnemy
 {
+    
     private Collider2D enemyCol;
     private Rigidbody2D enemyRb;
     private bool canAttack;
@@ -105,15 +106,14 @@ public class LargeEnemy : MonoBehaviour, IEnemy
     {
         if (collision.CompareTag("Shoot"))
         {
+            
             Morrer();
         }
     }
 
     public void Morrer()
     {
-        AudioManager._audioManager.PlayOneShot(FMODEvents._fmodEvents.sfxDeadLarge, this.transform.position);
-        Debug.Log("Morreu");
-        Destroy(this.gameObject);
+        
     }
 
     IEnumerator ShootRoutine()

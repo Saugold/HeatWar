@@ -1,24 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static GameController _gameController;
+
+    public delegate void EnemiesDie(int deads);
+    public static event EnemiesDie OnEnemiesDies;
+
+    public int deads;
+
     void Start()
     {
-        
+        _gameController = this;
+        deads = 0;
+        EnemyLife.OnEnemyDied += CountDead;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reiniciar();
+        }
     }
+
     public void Reiniciar()
     {
-        
-        
+        deads = 0;
+        Debug.Log("Reiniciado");
+    }
+
+    private void CountDead()
+    {
+        deads++;
+        Debug.Log("Deads: " + deads);
+
+        if (OnEnemiesDies != null)
+        {
+            OnEnemiesDies(deads);
+        }
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2663866762353538362}
   - component: {fileID: 3972004871153082910}
   - component: {fileID: 7066269436393565123}
+  - component: {fileID: 4775461646862282697}
   m_Layer: 6
   m_Name: BigEnemy
   m_TagString: Untagged
@@ -173,6 +174,33 @@ MonoBehaviour:
   intervaloRajada: 1
   tirosPorRajada: 3
   intervaloCadaTiro: 0.1
+--- !u!114 &4775461646862282697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576106212776400590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e8eb3b8a45daa4d8025ca0a177306f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 5
+  sfxDanoEnemy:
+    Guid:
+      Data1: 1168226587
+      Data2: 1110616596
+      Data3: -1483334780
+      Data4: 720797865
+    Path: event:/sfx/gameplay/sfx_big_enemy/sfx_big_enemy_damage
+  sfxMorrerEnemy:
+    Guid:
+      Data1: 1656091760
+      Data2: 1269163752
+      Data3: 1268247943
+      Data4: -719101945
+    Path: event:/sfx/gameplay/sfx_big_enemy/sfx_big_enemy_explosion
 --- !u!1 &5673854123445092025
 GameObject:
   m_ObjectHideFlags: 0

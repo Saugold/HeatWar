@@ -9,6 +9,7 @@ TagManager:
   - Charge
   - Enemy
   - Ground
+  - SpecialShoot
   layers:
   - Default
   - TransparentFX

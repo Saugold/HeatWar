@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
         }
         _audioManager = this;
         eventInstances = new List<EventInstance>();
-        DontDestroyOnLoad(gameObject); // Persistir o AudioManager entre as cenas
+         // Persistir o AudioManager entre as cenas
     }
 
     private void Start()

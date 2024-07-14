@@ -9,6 +9,9 @@ public class EnemySpawn : MonoBehaviour
     {
         public GameObject enemyPrefab;
         public float spawnProbability;
+        public int spawnLimit; // Limite máximo de spawn para este tipo de inimigo
+        [HideInInspector]
+        public int currentSpawnCount = 0; // Contador de inimigos spawnados
     }
 
     [SerializeField] private EnemySpawnInfo[] enemyTypes;
@@ -23,8 +26,8 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnInterval);
             SpawnEnemy();
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 
@@ -32,9 +35,18 @@ public class EnemySpawn : MonoBehaviour
     {
         float totalProbability = 0;
 
+        // Calcular a probabilidade total considerando apenas os tipos que ainda não atingiram seu limite de spawn
         foreach (var enemyType in enemyTypes)
         {
-            totalProbability += enemyType.spawnProbability;
+            if (enemyType.currentSpawnCount < enemyType.spawnLimit)
+            {
+                totalProbability += enemyType.spawnProbability;
+            }
+        }
+
+        if (totalProbability == 0) // Todos os tipos atingiram seu limite de spawn
+        {
+            return;
         }
 
         float randomValue = Random.Range(0, totalProbability);
@@ -42,11 +54,15 @@ public class EnemySpawn : MonoBehaviour
         float cumulativeProbability = 0;
         foreach (var enemyType in enemyTypes)
         {
-            cumulativeProbability += enemyType.spawnProbability;
-            if (randomValue <= cumulativeProbability)
+            if (enemyType.currentSpawnCount < enemyType.spawnLimit)
             {
-                Instantiate(enemyType.enemyPrefab, transform.position, Quaternion.identity);
-                break;
+                cumulativeProbability += enemyType.spawnProbability;
+                if (randomValue <= cumulativeProbability)
+                {
+                    Instantiate(enemyType.enemyPrefab, transform.position, Quaternion.identity);
+                    enemyType.currentSpawnCount++;
+                    break;
+                }
             }
         }
     }

@@ -38,7 +38,7 @@ public class Special : MonoBehaviour
         
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         instance.setParameterByName("tiro carregado", valorVFX);
         UpdateSpecialSlider();
@@ -155,6 +155,14 @@ public class Special : MonoBehaviour
         if (specialSlider != null)
         {
             specialSlider.value = carga / 100f;
+        }
+    }
+    private void OnDestroy()
+    {
+        if (instance.isValid())
+        {
+            instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            instance.release();
         }
     }
 }

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1770882106912106395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526981242279549367}
+  - component: {fileID: -6998600668843864461}
+  m_Layer: 0
+  m_Name: WaveController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526981242279549367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770882106912106395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6998600668843864461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770882106912106395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9c339841fbda54eae6a0b1b6bc05d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave1: {fileID: 7838652054266905025, guid: 147d4e1abe1538a49a7c6416d52d5ffb, type: 3}
+  wave2: {fileID: 7838652054266905025, guid: 26ef7ef407d972c4cb0b7b558d9b973a, type: 3}
+  wave21: {fileID: 7838652054266905025, guid: d488cd0177f26ac4897c23a6e771041b, type: 3}
+  wave22: {fileID: 7838652054266905025, guid: e07978c50b8836a4e8e77547f2bd4bee, type: 3}
+  wave3: {fileID: 7838652054266905025, guid: 75f55fb3e1c63e7429893c8d1979838a, type: 3}
+  wave31: {fileID: 7838652054266905025, guid: 50ec0c531243e344a96cd4d70247639c, type: 3}
+  wave32: {fileID: 7838652054266905025, guid: 3e171c873c1ba0e4c9574a20b26e1202, type: 3}
+  wave33: {fileID: 7838652054266905025, guid: 4d0e3a241cce3fb4f9513611ed91e08c, type: 3}
+  wave4: {fileID: 7838652054266905025, guid: 0aa6925f647d8d542af76178330cfbdf, type: 3}
+  wave41: {fileID: 7838652054266905025, guid: 7f8b654e7958ef849a619b4dc495966c, type: 3}
+  wave42: {fileID: 7838652054266905025, guid: 8363bc45ae3bf3f47b5e28e523825c7c, type: 3}
+  wave43: {fileID: 7838652054266905025, guid: 31c1b10961316064ea934cff90d8ab67, type: 3}
+  wave44: {fileID: 7838652054266905025, guid: 640efb9294f79034fb1a541a92be3ff3, type: 3}
+  wave45: {fileID: 7838652054266905025, guid: ad1a4e2332920d74299ba610660315fc, type: 3}
+  wave46: {fileID: 7838652054266905025, guid: e0e9824e43844d94ba3c6f56fecea10d, type: 3}
+  wave47: {fileID: 7838652054266905025, guid: 8b1afef463e0344488328b7e09928eeb, type: 3}
+  coletavel: {fileID: 6114720346543669709, guid: 4f5ac95296f6efe489f888eea12d8abd, type: 3}
+  coletavelPrefab: {fileID: 6114720346543669709, guid: 4f5ac95296f6efe489f888eea12d8abd, type: 3}
+  waveUI: {fileID: 0}
+  waveText: {fileID: 0}
+  deadDebug: {fileID: 0}
+  dicaText: {fileID: 0}
+  spawnAreaMin: {x: 26.8, y: 12.38}
+  spawnAreaMax: {x: 1.8, y: -13.47}
+  mainCamera: {fileID: 0}

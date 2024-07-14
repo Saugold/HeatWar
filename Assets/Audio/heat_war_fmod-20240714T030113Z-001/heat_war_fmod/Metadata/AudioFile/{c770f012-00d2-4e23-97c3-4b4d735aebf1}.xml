@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c770f012-00d2-4e23-97c3-4b4d735aebf1}">
+		<property name="assetPath">
+			<value>Dimond_Stars_140bpm.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>168</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f82f29a-cc11-4c3b-a51a-2eddd596bad7}</destination>
+		</relationship>
+	</object>
+</objects>
